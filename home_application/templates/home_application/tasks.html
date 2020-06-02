@@ -1,0 +1,8 @@
+<label class="col-sm-2 bk-lh30">选择业务: </label>
+<div class="col-sm-4">
+    <select name="" id="" class="form-control bk-valign-top">
+        {% for biz_name,biz_id in info %}
+            <option value={{ biz_id }}>{{ biz_name }}</option>
+        {% endfor %}
+    </select>
+</div>

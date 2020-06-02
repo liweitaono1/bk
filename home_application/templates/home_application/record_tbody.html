@@ -1,0 +1,15 @@
+{% for doinfo in doinfos %}
+    <tr>
+        <td>{{ doinfo.businessname }}</td>
+        <td>{{ doinfo.username }}</td>
+        <td>{{ doinfo.script }}</td>
+        <td>{{ doinfo.starttime }}</td>
+        <td>{{ doinfo.ipcount }}</td>
+        <td>{{ doinfo.status }}</td>
+        <td>{{ doinfo.scriptcontent }}</td>
+        <td>{{ doinfo.details }}</td>
+        <td>
+            <button class="btn btn-xs btn-primary" title="查看">查看</button>
+        </td>
+    </tr>
+{% endfor %}

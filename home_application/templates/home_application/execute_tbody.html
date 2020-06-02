@@ -1,0 +1,16 @@
+{% for hosts in data %}
+    <tr>
+        <td>
+            <input type="checkbox" value="{{ hosts.ip }}">
+        </td>
+        <td>{{ hosts.host_id }}</td>
+        <td>{{ hosts.ip }}</td>
+        <td>{{ hosts.name }}</td>
+        <td>{{ hosts.os }}</td>
+        <td>
+            <button class="btn btn-xs btn-danger" title="删除">
+                <i class="glyphicon glyphicon-remove"></i>
+            </button>
+        </td>
+    </tr>
+{% endfor %}

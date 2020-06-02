@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- 若您需要使用Kendo UI Professional，请联系版权人获得合法的授权或许可。 -->
+    <!-- Bootstrap css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css"
+          rel="stylesheet">
+    <!-- kendo ui css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css"
+          rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css"
+          rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!--蓝鲸提供的公用样式库 -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk_pack.css" rel="stylesheet">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/bk/js/bk.js"></script>
+    <!-- 数据埋点统计 -->
+    <script src="http://magicbox.bk.tencent.com/static_api/analysis.js"></script>
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/html5shiv.min.js"></script><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css-pro/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bk-icon-2.0/iconfont.css" rel="stylesheet">
+</head>
+
+<body class="bg-white" data-bg-color="bg-white">
+<div class="king-page-box">
+    <div class="king-layout1-header">
+        <nav class="">
+            <div style="overflow:hidden; z-index: inherit;" class="navbar king-horizontal-nav1  f14">
+                <div class="navbar-container">
+                    <div class="navbar-header pull-left">
+                        <a class="navbar-brand" href="javascript:;">
+                            <img src="https://magicbox.bk.tencent.com/static_api/v3/bk/images/logo.png" class="logo">
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav pull-left m0">
+                        <li class="active"><a href="javascript:void(0);">首页</a></li>
+                        <li><a href="javascript:void(0);">关于我们</a></li>
+                        <li><a href="javascript:void(0);">联系我们</a></li>
+                    </ul>
+                    <div class="navbar-header pull-right">
+                        <ul class="nav">
+                            <li class="user-info">
+                                <a href="javascript:;">
+                                    <img class="img-rounded"
+                                         src="https://magicbox.bk.tencent.com/static_api/v3/components/horizontal_nav1/images/avatar.png">
+                                    <span>admin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="king-layout2-main mt15" style="width:960px;">
+        <form class="form-vertical p15">
+            <div class="form-group ">
+                <label>选择业务：</label>
+                <input type="text" class="form-control" id="" placeholder="提示信息"></div>
+            <div class="form-group ">
+                <label>选择用户：</label>
+                <input type="text" class="form-control" id="" placeholder="提示信息"></div>
+            <div class="form-group ">
+                <label>选择脚本：</label>
+                <input type="text" class="form-control" id="" placeholder="提示信息"></div>
+            <!--HTML-->
+            <p class="magic-desc">日期范围选择器</p>
+            <div class="bk-form" style="width:600px;">
+                <div class="bk-form-item is-required">
+                    <label class="bk-label" style="width:150px;">单个日期</label>
+                    <div class="bk-form-content" style="margin-left:150px;">
+                        <input type="text" class="bk-form-input daterangepicker_demo" id="daterangepicker_demo1"
+                               placeholder="选择日期...">
+                    </div>
+                </div>
+
+                <div class="bk-form-item is-required">
+                    <label class="bk-label" style="width:150px;">日期范围</label>
+                    <div class="bk-form-content" style="margin-left:150px;">
+                        <input type="text" class="bk-form-input daterangepicker_demo" id="daterangepicker_demo2"
+                               placeholder="选择日期...">
+                    </div>
+                </div>
+
+                <div class="bk-form-item is-required">
+                    <label class="bk-label" style="width:150px;">综合示例</label>
+                    <div class="bk-form-content" style="margin-left:150px;">
+                        <input type="text" class="bk-form-input daterangepicker_demo" id="daterangepicker_demo3"
+                               placeholder="选择日期...">
+                    </div>
+                </div>
+
+                <div class="bk-form-item">
+                    <div class="bk-form-content" style="margin-left:150px;">
+                        <button class="bk-button bk-success" title="保存">保存</button>
+                        <button class="bk-button" title="取消">取消</button>
+                    </div>
+                </div>
+            </div>
+            <!--JS-->
+            <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/daterangepicker-2.0.5/moment.min.js"></script>
+            <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/daterangepicker-2.0.5/daterangepicker.js"></script>
+            <script type="text/javascript">
+                $(function () {
+                    //daterangepicker_demo1_js_start
+                    // 选择单个日期
+                    $('#daterangepicker_demo1').daterangepicker({
+                        locale: {
+                            format: 'YYYY-MM-DD'
+                        },
+                        autoApply: false, //选择日期后自动设置值
+                        singleDatePicker: true //单选选择一个日期
+                    });
+                    //daterangepicker_demo1_js_end
+
+                    //daterangepicker_demo2_js_start
+                    // 选择日期范围
+                    $('#daterangepicker_demo2').daterangepicker({
+                        locale: {
+                            "format": 'YYYY/MM/DD'
+                        },
+                        autoApply: true
+                    });
+                    //daterangepicker_demo2_js_end
+
+                    //daterangepicker_demo3_js_start
+                    // 综合示例
+                    $('#daterangepicker_demo3').daterangepicker({
+                        "showDropdowns": true, //显示年，月下拉选择框
+                        "showWeekNumbers": true, //显示第几周
+                        "timePicker": true, //时间选择
+                        "timePicker24Hour": true, //24小时制
+                        "timePickerIncrement": 1, //时间间隔
+                        "timePickerSeconds": true,
+                        "dateLimit": { //可选择的日期范围
+                            "days": 30
+                        },
+                        "ranges": {
+                            "前7天": [moment().subtract(6, 'days'), moment()],
+                            "前30天": [moment().subtract(29, 'days'), moment()],
+                            "本月": [moment().startOf('month'), moment().endOf('month')],
+                            "上个月": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+                        },
+                        "locale": {
+                            "format": "YYYY-MM-DD HH:mm:ss", // 日期格式
+                            "separator": " 至 ",
+                            "applyLabel": "确定",
+                            "cancelLabel": "取消",
+                            "fromLabel": "从",
+                            "toLabel": "到",
+                            "weekLabel": '周',
+                            "customRangeLabel": "自定义",
+                            "daysOfWeek": [
+                                "日",
+                                "一",
+                                "二",
+                                "三",
+                                "四",
+                                "五",
+                                "六"
+                            ],
+                            "monthNames": [
+                                "一月",
+                                "二月",
+                                "三月",
+                                "四月",
+                                "五月",
+                                "六月",
+                                "七月",
+                                "八月",
+                                "九月",
+                                "十月",
+                                "十一月",
+                                "十二月"
+                            ],
+                            "firstDay": 1 // 周开始时间
+                        },
+                        "startDate": "2015-07-01 10:35:20",
+                        "endDate": "2015-08-15 10:35:20",
+                        "opens": "center", //left/center/right
+                        "drops": "down", //选择框出现的位置 up/down
+                        "buttonClasses": "btn btn-sm", //按钮通用样式
+                        "applyClass": "btn-success", //确定按钮样式
+                        "cancelClass": "btn-default" //取消按钮样式
+                    });
+                    //daterangepicker_demo3_js_end
+                });
+            </script>
+
+        </form>
+    </div>
+
+
+    <table class="bk-table has-table-bordered bk-demo">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>名称</th>
+            <th>位置</th>
+            <th>日期</th>
+            <th>类型</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="fb bk-text-success">Active</span>
+            </td>
+            <td>
+                <a href="javascript:void(0);" class="bk-text-button">保存</a>
+                <a href="javascript:void(0);" class="bk-text-button">编辑</a>
+                <a href="javascript:void(0);" class="bk-text-button">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="fb bk-text-danger">Banned</span>
+            </td>
+            <td>
+                <a href="javascript:void(0);" class="bk-text-button">保存</a>
+                <a href="javascript:void(0);" class="bk-text-button">编辑</a>
+                <a href="javascript:void(0);" class="bk-text-button">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="fb bk-text-success">Active</span>
+            </td>
+            <td>
+                <a href="javascript:void(0);" class="bk-text-button">保存</a>
+                <a href="javascript:void(0);" class="bk-text-button">编辑</a>
+                <a href="javascript:void(0);" class="bk-text-button">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="fb bk-text-success">Active</span>
+            </td>
+            <td>
+                <a href="javascript:void(0);" class="bk-text-button">保存</a>
+                <a href="javascript:void(0);" class="bk-text-button">编辑</a>
+                <a href="javascript:void(0);" class="bk-text-button">删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td>
+                <span class="fb bk-text-danger">Banned</span>
+            </td>
+            <td>
+                <a href="javascript:void(0);" class="bk-text-button">保存</a>
+                <a href="javascript:void(0);" class="bk-text-button">编辑</a>
+                <a href="javascript:void(0);" class="bk-text-button">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
